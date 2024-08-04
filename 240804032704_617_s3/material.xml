@@ -11,12 +11,12 @@
       <imodel type="AsaroInelasticity">
         <rule type="PowerLawSlipRule">
           <resistance type="VoceSlipHardening">
-            <tau_sat>200.0</tau_sat>
-            <b>4.0</b>
-            <tau_0>100.0</tau_0>
+            <tau_sat>1250</tau_sat>
+            <b>0.25</b>
+            <tau_0>107</tau_0>
           </resistance>
-          <gamma0>3.333e-05</gamma0>
-          <n>2.0</n>
+          <gamma0>3.3333e-05</gamma0>
+          <n>4.5</n>
         </rule>
       </imodel>
     </kinematics>
