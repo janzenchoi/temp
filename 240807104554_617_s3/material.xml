@@ -1,12 +1,12 @@
 
 <materials>
-  <mat_1to1_cp type="SingleCrystalModel">
+  <mat_1to1_ae_cp type="SingleCrystalModel">
     <kinematics type="StandardKinematicModel">
-      <emodel type="IsotropicLinearElasticModel">
-        <m1_type>youngs</m1_type>
+      <emodel type="CubicLinearElasticModel">
         <m1>211000.0</m1>
-        <m2_type>poissons</m2_type>
         <m2>0.3</m2>
+        <m3>81000.0</m3>
+        <method>moduli</method>
       </emodel>
       <imodel type="AsaroInelasticity">
         <rule type="PowerLawSlipRule">
@@ -39,8 +39,8 @@
     <fallback_elastic_predictor>true</fallback_elastic_predictor>
     <force_divide>0</force_divide>
     <elastic_predictor_first_step>false</elastic_predictor_first_step>
-  </mat_1to1_cp>
-  <mat_1to1_vp type="GeneralIntegrator">
+  </mat_1to1_ae_cp>
+  <mat_1to1_ae_vp type="GeneralIntegrator">
 		<elastic type="IsotropicLinearElasticModel">
       <m1_type>youngs</m1_type>
       <m1>211000.0</m1>
@@ -79,5 +79,5 @@
 		<max_divide>4</max_divide>
 		<force_divide>false</force_divide>
 		<skip_first_step>false</skip_first_step>
-  </mat_1to1_vp>
+  </mat_1to1_ae_vp>
 </materials>
