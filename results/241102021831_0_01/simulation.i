@@ -169,8 +169,8 @@
 [Functions]
   [./applied_load]
     type = PiecewiseLinear
-    x    = '0 11140.0'
-    y    = '0 1231.852701595239'
+    x    = '0 4630.088206741375'
+    y    = '0 385.6267081695395'
   [../]
 []
 
@@ -226,7 +226,7 @@
   [./stress1]
     type               = NEMLCrystalPlasticity
     database           = 'material.xml'
-    model              = 'cvp_ae_lh6_cp'
+    model              = 'cvp_ae_lh_cp'
     large_kinematics   = true
     euler_angle_reader = euler_angle_file
     angle_convention   = 'bunge'
@@ -235,7 +235,7 @@
   [./stress2]
     type             = CauchyStressFromNEML
     database         = 'material.xml'
-    model            = 'cvp_ae_lh6_vp'
+    model            = 'cvp_ae_lh_vp'
     large_kinematics = true
     block            = '280 281'
   [../]
@@ -363,9 +363,9 @@
 
   # Time variables
   start_time = 0
-  end_time   = 11140.0
+  end_time   = 4630.088206741375
   dtmin      = 0.01
-  dtmax      = 11140.0
+  dtmax      = 4630.088206741375
 
   # Simulation speed up
   [./Predictor]
