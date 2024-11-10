@@ -169,8 +169,8 @@
 [Functions]
   [./applied_load]
     type = PiecewiseLinear
-    x    = '0 11140.0'
-    y    = '0 1231.852701595239'
+    x    = '0 4630.088206741375'
+    y    = '0 385.6267081695395'
   [../]
 []
 
@@ -363,9 +363,9 @@
 
   # Time variables
   start_time = 0
-  end_time   = 11140.0
+  end_time   = 4630.088206741375
   dtmin      = 0.01
-  dtmax      = 11140.0
+  dtmax      = 4630.088206741375
 
   # Simulation speed up
   [./Predictor]
