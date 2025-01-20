@@ -1,0 +1,1289 @@
+Authorization required, but no authorization protocol specified
+Authorization required, but no authorization protocol specified
+
+[33m
+*** Warning, This code is deprecated and will be removed in future versions:
+Please update your main.C to adapt new main function in MOOSE framework, see'test/src/main.C in MOOSE as an example of moose::main()'. [39m
+
+
+[33m
+*** Warning, This code is deprecated and will be removed in future versions:
+"registerAll" in Modules is deprecated. Please update your *App.C file(s) to call the new templated "registerAllObjects" method (e.g. ModulesApp::registerAllObjects<MyApp>(...))[39m
+
+
+[31m
+*** Warning, This code is deprecated and will be removed in future versions:
+***** Invalid Object: ElementPropertyReadFile *****
+Expired on Thu Jul  1 00:00:00 2021
+Update your application using the 'PropertyReadFile' object[39m
+
+[33m
+*** Warning, This code is deprecated and will be removed in future versions:
+/data2/choij/projects/moose_sim/scripts/results/250120211110_2_01/simulation.i:73.5: The 'Modules/TensorMechanics/Master' syntax is deprecated. Please use 'Physics/SolidMechanics/QuasiStatic' instead.[39m
+
+
+[33m
+*** Warning, This code is deprecated and will be removed in future versions:
+/data2/choij/projects/moose_sim/scripts/results/250120211110_2_01/simulation.i:74.7: The 'Modules/TensorMechanics/Master' syntax is deprecated. Please use 'Physics/SolidMechanics/QuasiStatic' instead.[39m
+
+
+[36m
+*** Info ***
+SolidMechanics Action: selecting 'incremental finite strain' formulation.[39m
+Framework Information:
+MOOSE Version:           git commit ed37a7924f on 2024-06-11
+LibMesh Version:         1c5369aa05eaae8ebeb7930845fce3b1d59cbb37
+PETSc Version:           3.20.3
+SLEPc Version:           3.20.1
+Current Time:            Mon Jan 20 21:11:12 2025
+Executable Timestamp:    Thu Jun 13 01:59:09 2024
+
+Parallelism:
+  Num Processors:          48
+  Num Threads:             1
+
+Mesh: 
+  Parallel Type:           replicated
+  Mesh Dimension:          3
+  Spatial Dimension:       3
+  Nodes:                   
+    Total:                 23415
+    Local:                 552
+    Min/Max/Avg:           388/568/487
+  Elems:                   
+    Total:                 17109
+    Local:                 360
+    Min/Max/Avg:           346/367/356
+  Num Subdomains:          278
+  Num Partitions:          48
+  Partitioner:             metis
+
+Nonlinear System:
+  Num DOFs:                70245
+  Num Local DOFs:          1656
+  Variables:               { "disp_x" "disp_y" "disp_z" } 
+  Finite Element Types:    "LAGRANGE" 
+  Approximation Orders:    "FIRST" 
+
+Auxiliary System:
+  Num DOFs:                171090
+  Num Local DOFs:          3600
+  Variables:               { "elastic_strain_xx" "strain_xx" "cauchy_stress_xx" "mechanical_strain_xx" 
+                             "block_id" "volume" "orientation_q1" "orientation_q2" "orientation_q3" "orientation_q4" 
+                             } 
+  Finite Element Types:    "MONOMIAL" 
+  Approximation Orders:    "CONSTANT" 
+
+Execution Information:
+  Executioner:             Transient
+  TimeStepper:             IterationAdaptiveDT
+  TimeIntegrator:          ImplicitEuler
+  Solver Mode:             NEWTON
+  PETSc Preconditioner:    hypre 
+  MOOSE Preconditioner:    SMP
+
+[31mLEGACY MODES ENABLED:[39m
+ This application uses the legacy material output option: material properties are output only on TIMESTEP_END, not INITIAL. To remove this message, set 'use_legacy_material_output' to false in this application. If there are gold output files that contain material property output for which output occurs on INITIAL, then these will generate diffs due to zero values being stored, and these tests should be re-golded.
+[39m
+[31mLEGACY MODES ENABLED:[39m
+ This application uses the legacy initial residual evaluation behavior. The legacy behavior performs an often times redundant residual evaluation before the solution modifying objects are executed prior to the initial (0th nonlinear iteration) residual evaluation. The new behavior skips that redundant residual evaluation unless the parameter Executioner/use_pre_smo_residual is set to true. To remove this message and enable the new behavior, set the parameter 'use_legacy_initial_residual_evaluation_behavior' to false in *App.C. Some tests that rely on the side effects of the legacy behavior may fail/diff and should be re-golded.
+[39m
+
+Time Step 0, time = 0
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | mCS_xx         | mEE_xx         | mTE_xx         |
++----------------+----------------+----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step 1, time = 1, dt = 1
+Pre-SMO residual: 1.11021
+ Skipping predictor this step
+
+Performing automatic scaling calculation
+
+ 0 Nonlinear |R| = [32m1.110207e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 9
+ 1 Nonlinear |R| = [32m8.445405e-05[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 16
+ 2 Nonlinear |R| = [32m4.753658e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 2
+Currently Executing
+  Finished Solving                                                                       [[33m  7.52 s[39m] [[33m  178 MB[39m]
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_x: [33m4.245419e-09[39m
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | mCS_xx         | mEE_xx         | mTE_xx         |
++----------------+----------------+----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |
+|   1.000000e+00 |   5.254981e+00 |   3.015318e-05 |   3.015706e-05 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step 2, time = 2.5, dt = 1.5
+Pre-SMO residual: 1.66531
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m5.975795e-06[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 13
+ 1 Nonlinear |R| = [32m4.993748e-10[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
+  Finished Solving                                                                       [[33m  5.96 s[39m] [[33m  216 MB[39m]
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_x: [33m4.440106e-10[39m
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | mCS_xx         | mEE_xx         | mTE_xx         |
++----------------+----------------+----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |
+|   1.000000e+00 |   5.254981e+00 |   3.015318e-05 |   3.015706e-05 |
+|   2.500000e+00 |   1.313297e+01 |   7.535495e-05 |   7.539061e-05 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step 3, time = 4.75, dt = 2.25
+Pre-SMO residual: 2.49797
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m2.581741e-05[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 13
+ 1 Nonlinear |R| = [32m2.114560e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
+  Finished Solving                                                                       [[33m  5.98 s[39m] [[33m  218 MB[39m]
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_x: [33m1.879321e-09[39m
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | mCS_xx         | mEE_xx         | mTE_xx         |
++----------------+----------------+----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |
+|   1.000000e+00 |   5.254981e+00 |   3.015318e-05 |   3.015706e-05 |
+|   2.500000e+00 |   1.313297e+01 |   7.535495e-05 |   7.539061e-05 |
+|   4.750000e+00 |   2.493189e+01 |   1.430443e-04 |   1.432363e-04 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step 4, time = 8.125, dt = 3.375
+Pre-SMO residual: 3.74695
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m9.558134e-05[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 13
+ 1 Nonlinear |R| = [32m7.706656e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
+  Finished Solving                                                                       [[33m  6.03 s[39m] [[33m  218 MB[39m]
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_x: [33m6.848572e-09[39m
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | mCS_xx         | mEE_xx         | mTE_xx         |
++----------------+----------------+----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |
+|   1.000000e+00 |   5.254981e+00 |   3.015318e-05 |   3.015706e-05 |
+|   2.500000e+00 |   1.313297e+01 |   7.535495e-05 |   7.539061e-05 |
+|   4.750000e+00 |   2.493189e+01 |   1.430443e-04 |   1.432363e-04 |
+|   8.125000e+00 |   4.256537e+01 |   2.441707e-04 |   2.449946e-04 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step 5, time = 13.1875, dt = 5.0625
+Pre-SMO residual: 5.62042
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m3.278058e-04[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 13
+ 1 Nonlinear |R| = [32m2.622328e-08[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
+  Finished Solving                                                                       [[33m  6.44 s[39m] [[33m  218 MB[39m]
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_x: [33m2.321295e-08[39m
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | mCS_xx         | mEE_xx         | mTE_xx         |
++----------------+----------------+----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |
+|   1.000000e+00 |   5.254981e+00 |   3.015318e-05 |   3.015706e-05 |
+|   2.500000e+00 |   1.313297e+01 |   7.535495e-05 |   7.539061e-05 |
+|   4.750000e+00 |   2.493189e+01 |   1.430443e-04 |   1.432363e-04 |
+|   8.125000e+00 |   4.256537e+01 |   2.441707e-04 |   2.449946e-04 |
+|   1.318750e+01 |   6.879605e+01 |   3.944816e-04 |   3.976086e-04 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step 6, time = 20.7812, dt = 7.59375
+Pre-SMO residual: 8.43063
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m1.063156e-03[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 13
+ 1 Nonlinear |R| = [32m9.073140e-08[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
+  Finished Solving                                                                       [[33m  7.29 s[39m] [[33m  218 MB[39m]
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_x: [33m7.737592e-08[39m
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | mCS_xx         | mEE_xx         | mTE_xx         |
++----------------+----------------+----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |
+|   1.000000e+00 |   5.254981e+00 |   3.015318e-05 |   3.015706e-05 |
+|   2.500000e+00 |   1.313297e+01 |   7.535495e-05 |   7.539061e-05 |
+|   4.750000e+00 |   2.493189e+01 |   1.430443e-04 |   1.432363e-04 |
+|   8.125000e+00 |   4.256537e+01 |   2.441707e-04 |   2.449946e-04 |
+|   1.318750e+01 |   6.879605e+01 |   3.944816e-04 |   3.976086e-04 |
+|   2.078125e+01 |   1.074318e+02 |   6.154907e-04 |   6.264773e-04 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step 7, time = 32.1719, dt = 11.3906
+Pre-SMO residual: 12.6459
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m3.241157e-03[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 13
+ 1 Nonlinear |R| = [32m4.561660e-07[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
+  Finished Solving                                                                       [[33m  7.28 s[39m] [[33m  218 MB[39m]
+[32m Solve Converged![39m
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | mCS_xx         | mEE_xx         | mTE_xx         |
++----------------+----------------+----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |
+|   1.000000e+00 |   5.254981e+00 |   3.015318e-05 |   3.015706e-05 |
+|   2.500000e+00 |   1.313297e+01 |   7.535495e-05 |   7.539061e-05 |
+|   4.750000e+00 |   2.493189e+01 |   1.430443e-04 |   1.432363e-04 |
+|   8.125000e+00 |   4.256537e+01 |   2.441707e-04 |   2.449946e-04 |
+|   1.318750e+01 |   6.879605e+01 |   3.944816e-04 |   3.976086e-04 |
+|   2.078125e+01 |   1.074318e+02 |   6.154907e-04 |   6.264773e-04 |
+|   3.217188e+01 |   1.631990e+02 |   9.333176e-04 |   9.696625e-04 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step 8, time = 49.2578, dt = 17.0859
+Pre-SMO residual: 18.9689
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m9.019142e-03[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 13
+ 1 Nonlinear |R| = [32m3.727833e-06[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
+  Finished Solving                                                                       [[33m  7.29 s[39m] [[33m  218 MB[39m]
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_z: [33m3.299692e-06[39m
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | mCS_xx         | mEE_xx         | mTE_xx         |
++----------------+----------------+----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |
+|   1.000000e+00 |   5.254981e+00 |   3.015318e-05 |   3.015706e-05 |
+|   2.500000e+00 |   1.313297e+01 |   7.535495e-05 |   7.539061e-05 |
+|   4.750000e+00 |   2.493189e+01 |   1.430443e-04 |   1.432363e-04 |
+|   8.125000e+00 |   4.256537e+01 |   2.441707e-04 |   2.449946e-04 |
+|   1.318750e+01 |   6.879605e+01 |   3.944816e-04 |   3.976086e-04 |
+|   2.078125e+01 |   1.074318e+02 |   6.154907e-04 |   6.264773e-04 |
+|   3.217188e+01 |   1.631990e+02 |   9.333176e-04 |   9.696625e-04 |
+|   4.925781e+01 |   2.405994e+02 |   1.371153e-03 |   1.484175e-03 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step 9, time = 74.8867, dt = 25.6289
+Pre-SMO residual: 28.4534
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m2.173877e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 14
+ 1 Nonlinear |R| = [32m2.554233e-05[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 14
+ 2 Nonlinear |R| = [32m2.160042e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 2
+  Finished Solving                                                                       [[33m 10.30 s[39m] [[33m  218 MB[39m]
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_x: [33m1.923672e-09[39m
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | mCS_xx         | mEE_xx         | mTE_xx         |
++----------------+----------------+----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |
+|   1.000000e+00 |   5.254981e+00 |   3.015318e-05 |   3.015706e-05 |
+|   2.500000e+00 |   1.313297e+01 |   7.535495e-05 |   7.539061e-05 |
+|   4.750000e+00 |   2.493189e+01 |   1.430443e-04 |   1.432363e-04 |
+|   8.125000e+00 |   4.256537e+01 |   2.441707e-04 |   2.449946e-04 |
+|   1.318750e+01 |   6.879605e+01 |   3.944816e-04 |   3.976086e-04 |
+|   2.078125e+01 |   1.074318e+02 |   6.154907e-04 |   6.264773e-04 |
+|   3.217188e+01 |   1.631990e+02 |   9.333176e-04 |   9.696625e-04 |
+|   4.925781e+01 |   2.405994e+02 |   1.371153e-03 |   1.484175e-03 |
+|   7.488672e+01 |   3.408546e+02 |   1.930387e-03 |   2.255347e-03 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step 10, time = 113.33, dt = 38.4434
+Pre-SMO residual: 42.6801
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m4.253927e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 14
+ 1 Nonlinear |R| = [32m1.092735e-04[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 15
+ 2 Nonlinear |R| = [32m6.654217e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 2
+  Finished Solving                                                                       [[33m 10.30 s[39m] [[33m  218 MB[39m]
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_x: [33m5.648195e-09[39m
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | mCS_xx         | mEE_xx         | mTE_xx         |
++----------------+----------------+----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |
+|   1.000000e+00 |   5.254981e+00 |   3.015318e-05 |   3.015706e-05 |
+|   2.500000e+00 |   1.313297e+01 |   7.535495e-05 |   7.539061e-05 |
+|   4.750000e+00 |   2.493189e+01 |   1.430443e-04 |   1.432363e-04 |
+|   8.125000e+00 |   4.256537e+01 |   2.441707e-04 |   2.449946e-04 |
+|   1.318750e+01 |   6.879605e+01 |   3.944816e-04 |   3.976086e-04 |
+|   2.078125e+01 |   1.074318e+02 |   6.154907e-04 |   6.264773e-04 |
+|   3.217188e+01 |   1.631990e+02 |   9.333176e-04 |   9.696625e-04 |
+|   4.925781e+01 |   2.405994e+02 |   1.371153e-03 |   1.484175e-03 |
+|   7.488672e+01 |   3.408546e+02 |   1.930387e-03 |   2.255347e-03 |
+|   1.133301e+02 |   4.577415e+02 |   2.567159e-03 |   3.410761e-03 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step 11, time = 170.995, dt = 57.665
+Pre-SMO residual: 64.0202
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m6.454194e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 15
+ 1 Nonlinear |R| = [32m2.562343e-04[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 15
+ 2 Nonlinear |R| = [32m2.245667e-08[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 2
+  Finished Solving                                                                       [[33m 10.25 s[39m] [[33m  218 MB[39m]
+[32m Solve Converged![39m
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | mCS_xx         | mEE_xx         | mTE_xx         |
++----------------+----------------+----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |
+|   1.000000e+00 |   5.254981e+00 |   3.015318e-05 |   3.015706e-05 |
+|   2.500000e+00 |   1.313297e+01 |   7.535495e-05 |   7.539061e-05 |
+|   4.750000e+00 |   2.493189e+01 |   1.430443e-04 |   1.432363e-04 |
+|   8.125000e+00 |   4.256537e+01 |   2.441707e-04 |   2.449946e-04 |
+|   1.318750e+01 |   6.879605e+01 |   3.944816e-04 |   3.976086e-04 |
+|   2.078125e+01 |   1.074318e+02 |   6.154907e-04 |   6.264773e-04 |
+|   3.217188e+01 |   1.631990e+02 |   9.333176e-04 |   9.696625e-04 |
+|   4.925781e+01 |   2.405994e+02 |   1.371153e-03 |   1.484175e-03 |
+|   7.488672e+01 |   3.408546e+02 |   1.930387e-03 |   2.255347e-03 |
+|   1.133301e+02 |   4.577415e+02 |   2.567159e-03 |   3.410761e-03 |
+|   1.709951e+02 |   5.772656e+02 |   3.196183e-03 |   5.140859e-03 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step 12, time = 257.493, dt = 86.4976
+Pre-SMO residual: 96.0303
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m7.607747e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 15
+ 1 Nonlinear |R| = [32m3.093955e-04[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 16
+ 2 Nonlinear |R| = [32m2.984393e-08[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 2
+  Finished Solving                                                                       [[33m 10.63 s[39m] [[33m  218 MB[39m]
+[32m Solve Converged![39m
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | mCS_xx         | mEE_xx         | mTE_xx         |
++----------------+----------------+----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |
+|   1.000000e+00 |   5.254981e+00 |   3.015318e-05 |   3.015706e-05 |
+|   2.500000e+00 |   1.313297e+01 |   7.535495e-05 |   7.539061e-05 |
+|   4.750000e+00 |   2.493189e+01 |   1.430443e-04 |   1.432363e-04 |
+|   8.125000e+00 |   4.256537e+01 |   2.441707e-04 |   2.449946e-04 |
+|   1.318750e+01 |   6.879605e+01 |   3.944816e-04 |   3.976086e-04 |
+|   2.078125e+01 |   1.074318e+02 |   6.154907e-04 |   6.264773e-04 |
+|   3.217188e+01 |   1.631990e+02 |   9.333176e-04 |   9.696625e-04 |
+|   4.925781e+01 |   2.405994e+02 |   1.371153e-03 |   1.484175e-03 |
+|   7.488672e+01 |   3.408546e+02 |   1.930387e-03 |   2.255347e-03 |
+|   1.133301e+02 |   4.577415e+02 |   2.567159e-03 |   3.410761e-03 |
+|   1.709951e+02 |   5.772656e+02 |   3.196183e-03 |   5.140859e-03 |
+|   2.574927e+02 |   6.855360e+02 |   3.743008e-03 |   7.729221e-03 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step 13, time = 387.239, dt = 129.746
+Pre-SMO residual: 144.045
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m7.307328e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 16
+ 1 Nonlinear |R| = [32m1.972648e-04[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 17
+ 2 Nonlinear |R| = [32m1.894806e-08[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 2
+  Finished Solving                                                                       [[33m 10.67 s[39m] [[33m  218 MB[39m]
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_x: [33m1.576807e-08[39m
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | mCS_xx         | mEE_xx         | mTE_xx         |
++----------------+----------------+----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |
+|   1.000000e+00 |   5.254981e+00 |   3.015318e-05 |   3.015706e-05 |
+|   2.500000e+00 |   1.313297e+01 |   7.535495e-05 |   7.539061e-05 |
+|   4.750000e+00 |   2.493189e+01 |   1.430443e-04 |   1.432363e-04 |
+|   8.125000e+00 |   4.256537e+01 |   2.441707e-04 |   2.449946e-04 |
+|   1.318750e+01 |   6.879605e+01 |   3.944816e-04 |   3.976086e-04 |
+|   2.078125e+01 |   1.074318e+02 |   6.154907e-04 |   6.264773e-04 |
+|   3.217188e+01 |   1.631990e+02 |   9.333176e-04 |   9.696625e-04 |
+|   4.925781e+01 |   2.405994e+02 |   1.371153e-03 |   1.484175e-03 |
+|   7.488672e+01 |   3.408546e+02 |   1.930387e-03 |   2.255347e-03 |
+|   1.133301e+02 |   4.577415e+02 |   2.567159e-03 |   3.410761e-03 |
+|   1.709951e+02 |   5.772656e+02 |   3.196183e-03 |   5.140859e-03 |
+|   2.574927e+02 |   6.855360e+02 |   3.743008e-03 |   7.729221e-03 |
+|   3.872390e+02 |   7.789789e+02 |   4.199929e-03 |   1.159660e-02 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step 14, time = 581.859, dt = 194.62
+Pre-SMO residual: 216.068
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m5.966102e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 20
+ 1 Nonlinear |R| = [32m8.354687e-05[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 22
+ 2 Nonlinear |R| = [32m8.108810e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 2
+  Finished Solving                                                                       [[33m 10.74 s[39m] [[33m  218 MB[39m]
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_x: [33m7.069821e-09[39m
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | mCS_xx         | mEE_xx         | mTE_xx         |
++----------------+----------------+----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |
+|   1.000000e+00 |   5.254981e+00 |   3.015318e-05 |   3.015706e-05 |
+|   2.500000e+00 |   1.313297e+01 |   7.535495e-05 |   7.539061e-05 |
+|   4.750000e+00 |   2.493189e+01 |   1.430443e-04 |   1.432363e-04 |
+|   8.125000e+00 |   4.256537e+01 |   2.441707e-04 |   2.449946e-04 |
+|   1.318750e+01 |   6.879605e+01 |   3.944816e-04 |   3.976086e-04 |
+|   2.078125e+01 |   1.074318e+02 |   6.154907e-04 |   6.264773e-04 |
+|   3.217188e+01 |   1.631990e+02 |   9.333176e-04 |   9.696625e-04 |
+|   4.925781e+01 |   2.405994e+02 |   1.371153e-03 |   1.484175e-03 |
+|   7.488672e+01 |   3.408546e+02 |   1.930387e-03 |   2.255347e-03 |
+|   1.133301e+02 |   4.577415e+02 |   2.567159e-03 |   3.410761e-03 |
+|   1.709951e+02 |   5.772656e+02 |   3.196183e-03 |   5.140859e-03 |
+|   2.574927e+02 |   6.855360e+02 |   3.743008e-03 |   7.729221e-03 |
+|   3.872390e+02 |   7.789789e+02 |   4.199929e-03 |   1.159660e-02 |
+|   5.818585e+02 |   8.666273e+02 |   4.628140e-03 |   1.736386e-02 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step 15, time = 873.788, dt = 291.929
+Pre-SMO residual: 324.102
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m5.483824e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 22
+ 1 Nonlinear |R| = [32m5.818591e-05[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 24
+ 2 Nonlinear |R| = [32m5.545782e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 2
+  Finished Solving                                                                       [[33m 10.81 s[39m] [[33m  218 MB[39m]
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_x: [33m4.612314e-09[39m
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | mCS_xx         | mEE_xx         | mTE_xx         |
++----------------+----------------+----------------+----------------+
+:                :                :                :                :
+|   1.000000e+00 |   5.254981e+00 |   3.015318e-05 |   3.015706e-05 |
+|   2.500000e+00 |   1.313297e+01 |   7.535495e-05 |   7.539061e-05 |
+|   4.750000e+00 |   2.493189e+01 |   1.430443e-04 |   1.432363e-04 |
+|   8.125000e+00 |   4.256537e+01 |   2.441707e-04 |   2.449946e-04 |
+|   1.318750e+01 |   6.879605e+01 |   3.944816e-04 |   3.976086e-04 |
+|   2.078125e+01 |   1.074318e+02 |   6.154907e-04 |   6.264773e-04 |
+|   3.217188e+01 |   1.631990e+02 |   9.333176e-04 |   9.696625e-04 |
+|   4.925781e+01 |   2.405994e+02 |   1.371153e-03 |   1.484175e-03 |
+|   7.488672e+01 |   3.408546e+02 |   1.930387e-03 |   2.255347e-03 |
+|   1.133301e+02 |   4.577415e+02 |   2.567159e-03 |   3.410761e-03 |
+|   1.709951e+02 |   5.772656e+02 |   3.196183e-03 |   5.140859e-03 |
+|   2.574927e+02 |   6.855360e+02 |   3.743008e-03 |   7.729221e-03 |
+|   3.872390e+02 |   7.789789e+02 |   4.199929e-03 |   1.159660e-02 |
+|   5.818585e+02 |   8.666273e+02 |   4.628140e-03 |   1.736386e-02 |
+|   8.737878e+02 |   9.642188e+02 |   5.117803e-03 |   2.593976e-02 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step 16, time = 1311.68, dt = 437.894
+Pre-SMO residual: 486.153
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m1.066312e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 22
+ 1 Nonlinear |R| = [32m1.401811e-04[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 30
+ 2 Nonlinear |R| = [32m1.247486e-08[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 2
+  Finished Solving                                                                       [[33m 11.08 s[39m] [[33m  218 MB[39m]
+[32m Solve Converged![39m
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | mCS_xx         | mEE_xx         | mTE_xx         |
++----------------+----------------+----------------+----------------+
+:                :                :                :                :
+|   2.500000e+00 |   1.313297e+01 |   7.535495e-05 |   7.539061e-05 |
+|   4.750000e+00 |   2.493189e+01 |   1.430443e-04 |   1.432363e-04 |
+|   8.125000e+00 |   4.256537e+01 |   2.441707e-04 |   2.449946e-04 |
+|   1.318750e+01 |   6.879605e+01 |   3.944816e-04 |   3.976086e-04 |
+|   2.078125e+01 |   1.074318e+02 |   6.154907e-04 |   6.264773e-04 |
+|   3.217188e+01 |   1.631990e+02 |   9.333176e-04 |   9.696625e-04 |
+|   4.925781e+01 |   2.405994e+02 |   1.371153e-03 |   1.484175e-03 |
+|   7.488672e+01 |   3.408546e+02 |   1.930387e-03 |   2.255347e-03 |
+|   1.133301e+02 |   4.577415e+02 |   2.567159e-03 |   3.410761e-03 |
+|   1.709951e+02 |   5.772656e+02 |   3.196183e-03 |   5.140859e-03 |
+|   2.574927e+02 |   6.855360e+02 |   3.743008e-03 |   7.729221e-03 |
+|   3.872390e+02 |   7.789789e+02 |   4.199929e-03 |   1.159660e-02 |
+|   5.818585e+02 |   8.666273e+02 |   4.628140e-03 |   1.736386e-02 |
+|   8.737878e+02 |   9.642188e+02 |   5.117803e-03 |   2.593976e-02 |
+|   1.311682e+03 |   1.087538e+03 |   5.752249e-03 |   3.863826e-02 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step 17, time = 1968.52, dt = 656.841
+Pre-SMO residual: 729.229
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m2.462830e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 24
+ 1 Nonlinear |R| = [32m4.576630e-04[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 33
+ 2 Nonlinear |R| = [32m9.498016e-08[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 2
+  Finished Solving                                                                       [[33m 11.19 s[39m] [[33m  218 MB[39m]
+[32m Solve Converged![39m
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | mCS_xx         | mEE_xx         | mTE_xx         |
++----------------+----------------+----------------+----------------+
+:                :                :                :                :
+|   4.750000e+00 |   2.493189e+01 |   1.430443e-04 |   1.432363e-04 |
+|   8.125000e+00 |   4.256537e+01 |   2.441707e-04 |   2.449946e-04 |
+|   1.318750e+01 |   6.879605e+01 |   3.944816e-04 |   3.976086e-04 |
+|   2.078125e+01 |   1.074318e+02 |   6.154907e-04 |   6.264773e-04 |
+|   3.217188e+01 |   1.631990e+02 |   9.333176e-04 |   9.696625e-04 |
+|   4.925781e+01 |   2.405994e+02 |   1.371153e-03 |   1.484175e-03 |
+|   7.488672e+01 |   3.408546e+02 |   1.930387e-03 |   2.255347e-03 |
+|   1.133301e+02 |   4.577415e+02 |   2.567159e-03 |   3.410761e-03 |
+|   1.709951e+02 |   5.772656e+02 |   3.196183e-03 |   5.140859e-03 |
+|   2.574927e+02 |   6.855360e+02 |   3.743008e-03 |   7.729221e-03 |
+|   3.872390e+02 |   7.789789e+02 |   4.199929e-03 |   1.159660e-02 |
+|   5.818585e+02 |   8.666273e+02 |   4.628140e-03 |   1.736386e-02 |
+|   8.737878e+02 |   9.642188e+02 |   5.117803e-03 |   2.593976e-02 |
+|   1.311682e+03 |   1.087538e+03 |   5.752249e-03 |   3.863826e-02 |
+|   1.968523e+03 |   1.248670e+03 |   6.592005e-03 |   5.732480e-02 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step 18, time = 2953.78, dt = 985.261
+Pre-SMO residual: 1093.84
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m5.526288e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 36
+ Damping factor: 0.331204
+ 1 Nonlinear |R| = [32m3.696203e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 30
+ Damping factor: 0.434827
+ 2 Nonlinear |R| = [32m2.089203e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 36
+ Damping factor: 0.68602
+ 3 Nonlinear |R| = [32m6.561491e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 35
+ 4 Nonlinear |R| = [32m3.108621e-05[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 46
+ 5 Nonlinear |R| = [32m6.120211e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 5
+  Finished Solving                                                                       [[33m 19.52 s[39m] [[33m  218 MB[39m]
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_x: [33m5.417014e-09[39m
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | mCS_xx         | mEE_xx         | mTE_xx         |
++----------------+----------------+----------------+----------------+
+:                :                :                :                :
+|   8.125000e+00 |   4.256537e+01 |   2.441707e-04 |   2.449946e-04 |
+|   1.318750e+01 |   6.879605e+01 |   3.944816e-04 |   3.976086e-04 |
+|   2.078125e+01 |   1.074318e+02 |   6.154907e-04 |   6.264773e-04 |
+|   3.217188e+01 |   1.631990e+02 |   9.333176e-04 |   9.696625e-04 |
+|   4.925781e+01 |   2.405994e+02 |   1.371153e-03 |   1.484175e-03 |
+|   7.488672e+01 |   3.408546e+02 |   1.930387e-03 |   2.255347e-03 |
+|   1.133301e+02 |   4.577415e+02 |   2.567159e-03 |   3.410761e-03 |
+|   1.709951e+02 |   5.772656e+02 |   3.196183e-03 |   5.140859e-03 |
+|   2.574927e+02 |   6.855360e+02 |   3.743008e-03 |   7.729221e-03 |
+|   3.872390e+02 |   7.789789e+02 |   4.199929e-03 |   1.159660e-02 |
+|   5.818585e+02 |   8.666273e+02 |   4.628140e-03 |   1.736386e-02 |
+|   8.737878e+02 |   9.642188e+02 |   5.117803e-03 |   2.593976e-02 |
+|   1.311682e+03 |   1.087538e+03 |   5.752249e-03 |   3.863826e-02 |
+|   1.968523e+03 |   1.248670e+03 |   6.592005e-03 |   5.732480e-02 |
+|   2.953784e+03 |   1.452929e+03 |   7.662098e-03 |   8.457585e-02 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step 19, time = 4431.68, dt = 1477.89
+Pre-SMO residual: 1640.77
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m1.228621e+00[39m
+  Linear solve did not converge due to DIVERGED_ITS iterations 500
+ Damping factor: 0.00275915
+ 1 Nonlinear |R| = [33m1.225231e+00[39m
+  Linear solve did not converge due to DIVERGED_ITS iterations 500
+ Damping factor: 0.00519581
+ 2 Nonlinear |R| = [33m1.218866e+00[39m
+  Linear solve did not converge due to DIVERGED_ITS iterations 500
+ Damping factor: 0.00304433
+ 3 Nonlinear |R| = [33m1.215156e+00[39m
+  Linear solve did not converge due to DIVERGED_ITS iterations 500
+ Damping factor: 0.00497896
+ 4 Nonlinear |R| = [33m1.209106e+00[39m
+  Linear solve did not converge due to DIVERGED_ITS iterations 500
+ Damping factor: 0.00337098
+ 5 Nonlinear |R| = [33m1.205030e+00[39m
+  Linear solve did not converge due to DIVERGED_ITS iterations 500
+ Damping factor: 0.00484982
+ 6 Nonlinear |R| = [33m1.199187e+00[39m
+  Linear solve did not converge due to DIVERGED_ITS iterations 500
+ Damping factor: 0.00387726
+ 7 Nonlinear |R| = [33m1.194538e+00[39m
+  Linear solve did not converge due to DIVERGED_ITS iterations 500
+ Damping factor: 0.00499169
+ 8 Nonlinear |R| = [33m1.188576e+00[39m
+  Linear solve did not converge due to DIVERGED_ITS iterations 500
+ Damping factor: 0.00424121
+ 9 Nonlinear |R| = [33m1.183536e+00[39m
+  Linear solve did not converge due to DIVERGED_ITS iterations 500
+ Damping factor: 0.00495258
+10 Nonlinear |R| = [33m1.177674e+00[39m
+  Linear solve did not converge due to DIVERGED_ITS iterations 500
+ Damping factor: 0.00478605
+11 Nonlinear |R| = [33m1.172040e+00[39m
+  Linear solve did not converge due to DIVERGED_ITS iterations 500
+ Damping factor: 0.00291317
+12 Nonlinear |R| = [33m1.168626e+00[39m
+  Linear solve did not converge due to DIVERGED_ITS iterations 500
+ Damping factor: 0.00595303
+13 Nonlinear |R| = [33m1.161670e+00[39m
+  Linear solve did not converge due to DIVERGED_ITS iterations 500
+ Damping factor: 0.00279997
+14 Nonlinear |R| = [33m1.158418e+00[39m
+  Linear solve did not converge due to DIVERGED_ITS iterations 500
+ Damping factor: 0.00729208
+15 Nonlinear |R| = [33m1.149972e+00[39m
+  Linear solve did not converge due to DIVERGED_ITS iterations 500
+ Damping factor: 0.00246849
+16 Nonlinear |R| = [33m1.147134e+00[39m
+Nonlinear solve did not converge due to DIVERGED_MAX_IT iterations 16
+  Finished Solving                                                                       [[33m 62.37 s[39m] [[33m  219 MB[39m]
+[31m Solve Did NOT Converge![39m
+Aborting as solve did not converge
+
+Solve failed, cutting timestep.
+
+Time Step 19, time = 3692.73, dt = 738.946
+Pre-SMO residual: 820.383
+ Skipping predictor this step
+ 0 Nonlinear |R| = [32m8.203831e+02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 12
+ Damping factor: 0.325111
+ 1 Nonlinear |R| = [32m5.536673e+02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 13
+ Damping factor: 0.418128
+ 2 Nonlinear |R| = [32m3.221637e+02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 13
+ Damping factor: 0.503996
+ 3 Nonlinear |R| = [32m1.597946e+02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 14
+ Damping factor: 0.633407
+ 4 Nonlinear |R| = [32m5.857952e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 20
+ Damping factor: 0.931328
+ 5 Nonlinear |R| = [32m4.022778e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 26
+ 6 Nonlinear |R| = [32m3.635125e-04[39m
+Nonlinear solve converged due to CONVERGED_FNORM_RELATIVE iterations 6
+  Finished Solving                                                                       [[33m 23.69 s[39m] [[33m  219 MB[39m]
+[32m Solve Converged![39m
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | mCS_xx         | mEE_xx         | mTE_xx         |
++----------------+----------------+----------------+----------------+
+:                :                :                :                :
+|   1.318750e+01 |   6.879605e+01 |   3.944816e-04 |   3.976086e-04 |
+|   2.078125e+01 |   1.074318e+02 |   6.154907e-04 |   6.264773e-04 |
+|   3.217188e+01 |   1.631990e+02 |   9.333176e-04 |   9.696625e-04 |
+|   4.925781e+01 |   2.405994e+02 |   1.371153e-03 |   1.484175e-03 |
+|   7.488672e+01 |   3.408546e+02 |   1.930387e-03 |   2.255347e-03 |
+|   1.133301e+02 |   4.577415e+02 |   2.567159e-03 |   3.410761e-03 |
+|   1.709951e+02 |   5.772656e+02 |   3.196183e-03 |   5.140859e-03 |
+|   2.574927e+02 |   6.855360e+02 |   3.743008e-03 |   7.729221e-03 |
+|   3.872390e+02 |   7.789789e+02 |   4.199929e-03 |   1.159660e-02 |
+|   5.818585e+02 |   8.666273e+02 |   4.628140e-03 |   1.736386e-02 |
+|   8.737878e+02 |   9.642188e+02 |   5.117803e-03 |   2.593976e-02 |
+|   1.311682e+03 |   1.087538e+03 |   5.752249e-03 |   3.863826e-02 |
+|   1.968523e+03 |   1.248670e+03 |   6.592005e-03 |   5.732480e-02 |
+|   2.953784e+03 |   1.452929e+03 |   7.662098e-03 |   8.457585e-02 |
+|   3.692730e+03 |   1.588078e+03 |   8.371588e-03 |   1.045954e-01 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step 20, time = 4431.68, dt = 738.946
+Pre-SMO residual: 820.383
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m3.105263e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 18
+ Damping factor: 0.489151
+ 1 Nonlinear |R| = [32m1.586375e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 18
+ Damping factor: 0.971797
+ 2 Nonlinear |R| = [32m4.483692e-03[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 19
+ 3 Nonlinear |R| = [32m3.909265e-07[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 3
+  Finished Solving                                                                       [[33m 13.70 s[39m] [[33m  219 MB[39m]
+[32m Solve Converged![39m
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | mCS_xx         | mEE_xx         | mTE_xx         |
++----------------+----------------+----------------+----------------+
+:                :                :                :                :
+|   2.078125e+01 |   1.074318e+02 |   6.154907e-04 |   6.264773e-04 |
+|   3.217188e+01 |   1.631990e+02 |   9.333176e-04 |   9.696625e-04 |
+|   4.925781e+01 |   2.405994e+02 |   1.371153e-03 |   1.484175e-03 |
+|   7.488672e+01 |   3.408546e+02 |   1.930387e-03 |   2.255347e-03 |
+|   1.133301e+02 |   4.577415e+02 |   2.567159e-03 |   3.410761e-03 |
+|   1.709951e+02 |   5.772656e+02 |   3.196183e-03 |   5.140859e-03 |
+|   2.574927e+02 |   6.855360e+02 |   3.743008e-03 |   7.729221e-03 |
+|   3.872390e+02 |   7.789789e+02 |   4.199929e-03 |   1.159660e-02 |
+|   5.818585e+02 |   8.666273e+02 |   4.628140e-03 |   1.736386e-02 |
+|   8.737878e+02 |   9.642188e+02 |   5.117803e-03 |   2.593976e-02 |
+|   1.311682e+03 |   1.087538e+03 |   5.752249e-03 |   3.863826e-02 |
+|   1.968523e+03 |   1.248670e+03 |   6.592005e-03 |   5.732480e-02 |
+|   2.953784e+03 |   1.452929e+03 |   7.662098e-03 |   8.457585e-02 |
+|   3.692730e+03 |   1.588078e+03 |   8.371588e-03 |   1.045954e-01 |
+|   4.431676e+03 |   1.706924e+03 |   8.995782e-03 |   1.242113e-01 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step 21, time = 5540.09, dt = 1108.42
+Pre-SMO residual: 1230.57
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m6.834096e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 38
+ Damping factor: 0.0682256
+ 1 Nonlinear |R| = [32m6.367863e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 38
+ Damping factor: 0.0758063
+ 2 Nonlinear |R| = [32m5.885166e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 38
+ Damping factor: 0.0854527
+ 3 Nonlinear |R| = [32m5.382292e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 39
+ Damping factor: 0.0978806
+ 4 Nonlinear |R| = [32m4.855505e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 39
+ Damping factor: 0.111502
+ 5 Nonlinear |R| = [32m4.314141e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 39
+ Damping factor: 0.128366
+ 6 Nonlinear |R| = [32m3.760393e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 40
+ Damping factor: 0.144943
+ 7 Nonlinear |R| = [32m3.215392e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 40
+ Damping factor: 0.167482
+ 8 Nonlinear |R| = [32m2.676910e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 41
+ Damping factor: 0.200371
+ 9 Nonlinear |R| = [32m2.140575e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 47
+ Damping factor: 0.24585
+10 Nonlinear |R| = [32m1.614352e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 47
+ Damping factor: 0.321578
+11 Nonlinear |R| = [32m1.095251e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 43
+ Damping factor: 0.46578
+12 Nonlinear |R| = [32m5.851443e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 42
+ Damping factor: 0.861439
+13 Nonlinear |R| = [32m8.112052e-03[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 40
+14 Nonlinear |R| = [32m2.208375e-06[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 14
+  Finished Solving                                                                       [[33m 43.67 s[39m] [[33m  219 MB[39m]
+[32m Solve Converged![39m
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | mCS_xx         | mEE_xx         | mTE_xx         |
++----------------+----------------+----------------+----------------+
+:                :                :                :                :
+|   3.217188e+01 |   1.631990e+02 |   9.333176e-04 |   9.696625e-04 |
+|   4.925781e+01 |   2.405994e+02 |   1.371153e-03 |   1.484175e-03 |
+|   7.488672e+01 |   3.408546e+02 |   1.930387e-03 |   2.255347e-03 |
+|   1.133301e+02 |   4.577415e+02 |   2.567159e-03 |   3.410761e-03 |
+|   1.709951e+02 |   5.772656e+02 |   3.196183e-03 |   5.140859e-03 |
+|   2.574927e+02 |   6.855360e+02 |   3.743008e-03 |   7.729221e-03 |
+|   3.872390e+02 |   7.789789e+02 |   4.199929e-03 |   1.159660e-02 |
+|   5.818585e+02 |   8.666273e+02 |   4.628140e-03 |   1.736386e-02 |
+|   8.737878e+02 |   9.642188e+02 |   5.117803e-03 |   2.593976e-02 |
+|   1.311682e+03 |   1.087538e+03 |   5.752249e-03 |   3.863826e-02 |
+|   1.968523e+03 |   1.248670e+03 |   6.592005e-03 |   5.732480e-02 |
+|   2.953784e+03 |   1.452929e+03 |   7.662098e-03 |   8.457585e-02 |
+|   3.692730e+03 |   1.588078e+03 |   8.371588e-03 |   1.045954e-01 |
+|   4.431676e+03 |   1.706924e+03 |   8.995782e-03 |   1.242113e-01 |
+|   5.540095e+03 |   1.854139e+03 |   9.769148e-03 |   1.527638e-01 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step 22, time = 6282.74, dt = 742.641
+Pre-SMO residual: 824.485
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m3.115901e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 17
+ Damping factor: 0.335136
+ 1 Nonlinear |R| = [32m2.071645e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 17
+ Damping factor: 0.490346
+ 2 Nonlinear |R| = [32m1.055826e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 17
+ Damping factor: 0.93856
+ 3 Nonlinear |R| = [32m6.488553e-03[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 17
+ 4 Nonlinear |R| = [32m7.137282e-07[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 4
+  Finished Solving                                                                       [[33m 16.23 s[39m] [[33m  219 MB[39m]
+[32m Solve Converged![39m
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | mCS_xx         | mEE_xx         | mTE_xx         |
++----------------+----------------+----------------+----------------+
+:                :                :                :                :
+|   4.925781e+01 |   2.405994e+02 |   1.371153e-03 |   1.484175e-03 |
+|   7.488672e+01 |   3.408546e+02 |   1.930387e-03 |   2.255347e-03 |
+|   1.133301e+02 |   4.577415e+02 |   2.567159e-03 |   3.410761e-03 |
+|   1.709951e+02 |   5.772656e+02 |   3.196183e-03 |   5.140859e-03 |
+|   2.574927e+02 |   6.855360e+02 |   3.743008e-03 |   7.729221e-03 |
+|   3.872390e+02 |   7.789789e+02 |   4.199929e-03 |   1.159660e-02 |
+|   5.818585e+02 |   8.666273e+02 |   4.628140e-03 |   1.736386e-02 |
+|   8.737878e+02 |   9.642188e+02 |   5.117803e-03 |   2.593976e-02 |
+|   1.311682e+03 |   1.087538e+03 |   5.752249e-03 |   3.863826e-02 |
+|   1.968523e+03 |   1.248670e+03 |   6.592005e-03 |   5.732480e-02 |
+|   2.953784e+03 |   1.452929e+03 |   7.662098e-03 |   8.457585e-02 |
+|   3.692730e+03 |   1.588078e+03 |   8.371588e-03 |   1.045954e-01 |
+|   4.431676e+03 |   1.706924e+03 |   8.995782e-03 |   1.242113e-01 |
+|   5.540095e+03 |   1.854139e+03 |   9.769148e-03 |   1.527638e-01 |
+|   6.282735e+03 |   1.940338e+03 |   1.022281e-02 |   1.715200e-01 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step 23, time = 7396.7, dt = 1113.96
+Pre-SMO residual: 1236.73
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m6.791377e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 28
+ Damping factor: 0.0653054
+ 1 Nonlinear |R| = [32m6.347897e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 28
+ Damping factor: 0.0695845
+ 2 Nonlinear |R| = [32m5.906215e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 28
+ Damping factor: 0.0744933
+ 3 Nonlinear |R| = [32m5.466276e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 28
+ Damping factor: 0.0804088
+ 4 Nonlinear |R| = [32m5.026777e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 28
+ Damping factor: 0.0872791
+ 5 Nonlinear |R| = [32m4.588080e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 27
+ Damping factor: 0.0956378
+ 6 Nonlinear |R| = [32m4.149322e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 27
+ Damping factor: 0.105882
+ 7 Nonlinear |R| = [32m3.710020e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 27
+ Damping factor: 0.118726
+ 8 Nonlinear |R| = [32m3.269578e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 27
+ Damping factor: 0.135484
+ 9 Nonlinear |R| = [32m2.826638e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 27
+ Damping factor: 0.158022
+10 Nonlinear |R| = [32m2.380004e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 28
+ Damping factor: 0.189764
+11 Nonlinear |R| = [32m1.928402e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 29
+ Damping factor: 0.237609
+12 Nonlinear |R| = [32m1.470234e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 28
+ Damping factor: 0.317295
+13 Nonlinear |R| = [32m1.003776e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 26
+ Damping factor: 0.475194
+14 Nonlinear |R| = [32m5.268313e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 26
+ Damping factor: 0.925478
+15 Nonlinear |R| = [32m3.932311e-03[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 27
+16 Nonlinear |R| = [32m8.208702e-07[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 16
+  Finished Solving                                                                       [[33m 48.97 s[39m] [[33m  219 MB[39m]
+[32m Solve Converged![39m
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | mCS_xx         | mEE_xx         | mTE_xx         |
++----------------+----------------+----------------+----------------+
+:                :                :                :                :
+|   7.488672e+01 |   3.408546e+02 |   1.930387e-03 |   2.255347e-03 |
+|   1.133301e+02 |   4.577415e+02 |   2.567159e-03 |   3.410761e-03 |
+|   1.709951e+02 |   5.772656e+02 |   3.196183e-03 |   5.140859e-03 |
+|   2.574927e+02 |   6.855360e+02 |   3.743008e-03 |   7.729221e-03 |
+|   3.872390e+02 |   7.789789e+02 |   4.199929e-03 |   1.159660e-02 |
+|   5.818585e+02 |   8.666273e+02 |   4.628140e-03 |   1.736386e-02 |
+|   8.737878e+02 |   9.642188e+02 |   5.117803e-03 |   2.593976e-02 |
+|   1.311682e+03 |   1.087538e+03 |   5.752249e-03 |   3.863826e-02 |
+|   1.968523e+03 |   1.248670e+03 |   6.592005e-03 |   5.732480e-02 |
+|   2.953784e+03 |   1.452929e+03 |   7.662098e-03 |   8.457585e-02 |
+|   3.692730e+03 |   1.588078e+03 |   8.371588e-03 |   1.045954e-01 |
+|   4.431676e+03 |   1.706924e+03 |   8.995782e-03 |   1.242113e-01 |
+|   5.540095e+03 |   1.854139e+03 |   9.769148e-03 |   1.527638e-01 |
+|   6.282735e+03 |   1.940338e+03 |   1.022281e-02 |   1.715200e-01 |
+|   7.396696e+03 |   2.045569e+03 |   1.077551e-02 |   1.988393e-01 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step 24, time = 8143.05, dt = 746.354
+Pre-SMO residual: 828.608
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m3.092319e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 16
+ Damping factor: 0.49127
+ 1 Nonlinear |R| = [32m1.573129e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 16
+ Damping factor: 0.956988
+ 2 Nonlinear |R| = [32m6.767675e-03[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 16
+ 3 Nonlinear |R| = [32m8.259558e-07[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 3
+  Finished Solving                                                                       [[33m 13.39 s[39m] [[33m  219 MB[39m]
+[32m Solve Converged![39m
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | mCS_xx         | mEE_xx         | mTE_xx         |
++----------------+----------------+----------------+----------------+
+:                :                :                :                :
+|   1.133301e+02 |   4.577415e+02 |   2.567159e-03 |   3.410761e-03 |
+|   1.709951e+02 |   5.772656e+02 |   3.196183e-03 |   5.140859e-03 |
+|   2.574927e+02 |   6.855360e+02 |   3.743008e-03 |   7.729221e-03 |
+|   3.872390e+02 |   7.789789e+02 |   4.199929e-03 |   1.159660e-02 |
+|   5.818585e+02 |   8.666273e+02 |   4.628140e-03 |   1.736386e-02 |
+|   8.737878e+02 |   9.642188e+02 |   5.117803e-03 |   2.593976e-02 |
+|   1.311682e+03 |   1.087538e+03 |   5.752249e-03 |   3.863826e-02 |
+|   1.968523e+03 |   1.248670e+03 |   6.592005e-03 |   5.732480e-02 |
+|   2.953784e+03 |   1.452929e+03 |   7.662098e-03 |   8.457585e-02 |
+|   3.692730e+03 |   1.588078e+03 |   8.371588e-03 |   1.045954e-01 |
+|   4.431676e+03 |   1.706924e+03 |   8.995782e-03 |   1.242113e-01 |
+|   5.540095e+03 |   1.854139e+03 |   9.769148e-03 |   1.527638e-01 |
+|   6.282735e+03 |   1.940338e+03 |   1.022281e-02 |   1.715200e-01 |
+|   7.396696e+03 |   2.045569e+03 |   1.077551e-02 |   1.988393e-01 |
+|   8.143050e+03 |   2.106450e+03 |   1.109602e-02 |   2.167930e-01 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step 25, time = 9262.58, dt = 1119.53
+Pre-SMO residual: 1242.91
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m6.791403e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 26
+ Damping factor: 0.0785926
+ 1 Nonlinear |R| = [32m6.257717e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 25
+ Damping factor: 0.0850177
+ 2 Nonlinear |R| = [32m5.725771e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 25
+ Damping factor: 0.0925503
+ 3 Nonlinear |R| = [32m5.195922e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 25
+ Damping factor: 0.101605
+ 4 Nonlinear |R| = [32m4.668064e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 25
+ Damping factor: 0.112676
+ 5 Nonlinear |R| = [32m4.142153e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 25
+ Damping factor: 0.126611
+ 6 Nonlinear |R| = [32m3.617778e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 25
+ Damping factor: 0.144666
+ 7 Nonlinear |R| = [32m3.094476e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 26
+ Damping factor: 0.169003
+ 8 Nonlinear |R| = [32m2.571566e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 26
+ Damping factor: 0.203522
+ 9 Nonlinear |R| = [32m2.048261e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 26
+ Damping factor: 0.255434
+10 Nonlinear |R| = [32m1.525135e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 24
+ Damping factor: 0.341946
+11 Nonlinear |R| = [32m1.003692e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 24
+ Damping factor: 0.518839
+12 Nonlinear |R| = [32m4.830099e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 24
+13 Nonlinear |R| = [32m7.733805e-05[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 27
+14 Nonlinear |R| = [32m7.597306e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 14
+  Finished Solving                                                                       [[33m 43.22 s[39m] [[33m  219 MB[39m]
+[32m Solve Converged![39m
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | mCS_xx         | mEE_xx         | mTE_xx         |
++----------------+----------------+----------------+----------------+
+:                :                :                :                :
+|   1.709951e+02 |   5.772656e+02 |   3.196183e-03 |   5.140859e-03 |
+|   2.574927e+02 |   6.855360e+02 |   3.743008e-03 |   7.729221e-03 |
+|   3.872390e+02 |   7.789789e+02 |   4.199929e-03 |   1.159660e-02 |
+|   5.818585e+02 |   8.666273e+02 |   4.628140e-03 |   1.736386e-02 |
+|   8.737878e+02 |   9.642188e+02 |   5.117803e-03 |   2.593976e-02 |
+|   1.311682e+03 |   1.087538e+03 |   5.752249e-03 |   3.863826e-02 |
+|   1.968523e+03 |   1.248670e+03 |   6.592005e-03 |   5.732480e-02 |
+|   2.953784e+03 |   1.452929e+03 |   7.662098e-03 |   8.457585e-02 |
+|   3.692730e+03 |   1.588078e+03 |   8.371588e-03 |   1.045954e-01 |
+|   4.431676e+03 |   1.706924e+03 |   8.995782e-03 |   1.242113e-01 |
+|   5.540095e+03 |   1.854139e+03 |   9.769148e-03 |   1.527638e-01 |
+|   6.282735e+03 |   1.940338e+03 |   1.022281e-02 |   1.715200e-01 |
+|   7.396696e+03 |   2.045569e+03 |   1.077551e-02 |   1.988393e-01 |
+|   8.143050e+03 |   2.106450e+03 |   1.109602e-02 |   2.167930e-01 |
+|   9.262581e+03 |   2.179453e+03 |   1.147875e-02 |   2.429545e-01 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step 26, time = 10012.7, dt = 750.086
+Pre-SMO residual: 832.751
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m3.074449e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 16
+ Damping factor: 0.144348
+ 1 Nonlinear |R| = [32m2.630681e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 16
+ Damping factor: 0.167404
+ 2 Nonlinear |R| = [32m2.190316e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 16
+ Damping factor: 0.199512
+ 3 Nonlinear |R| = [32m1.753342e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 16
+ Damping factor: 0.247289
+ 4 Nonlinear |R| = [32m1.319780e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 16
+ Damping factor: 0.325831
+ 5 Nonlinear |R| = [32m8.897737e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 16
+ Damping factor: 0.47901
+ 6 Nonlinear |R| = [32m4.635825e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 16
+ Damping factor: 0.90911
+ 7 Nonlinear |R| = [32m4.215594e-03[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 16
+ 8 Nonlinear |R| = [32m4.792719e-07[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 8
+  Finished Solving                                                                       [[33m 26.74 s[39m] [[33m  219 MB[39m]
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_x: [33m4.041524e-07[39m
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | mCS_xx         | mEE_xx         | mTE_xx         |
++----------------+----------------+----------------+----------------+
+:                :                :                :                :
+|   2.574927e+02 |   6.855360e+02 |   3.743008e-03 |   7.729221e-03 |
+|   3.872390e+02 |   7.789789e+02 |   4.199929e-03 |   1.159660e-02 |
+|   5.818585e+02 |   8.666273e+02 |   4.628140e-03 |   1.736386e-02 |
+|   8.737878e+02 |   9.642188e+02 |   5.117803e-03 |   2.593976e-02 |
+|   1.311682e+03 |   1.087538e+03 |   5.752249e-03 |   3.863826e-02 |
+|   1.968523e+03 |   1.248670e+03 |   6.592005e-03 |   5.732480e-02 |
+|   2.953784e+03 |   1.452929e+03 |   7.662098e-03 |   8.457585e-02 |
+|   3.692730e+03 |   1.588078e+03 |   8.371588e-03 |   1.045954e-01 |
+|   4.431676e+03 |   1.706924e+03 |   8.995782e-03 |   1.242113e-01 |
+|   5.540095e+03 |   1.854139e+03 |   9.769148e-03 |   1.527638e-01 |
+|   6.282735e+03 |   1.940338e+03 |   1.022281e-02 |   1.715200e-01 |
+|   7.396696e+03 |   2.045569e+03 |   1.077551e-02 |   1.988393e-01 |
+|   8.143050e+03 |   2.106450e+03 |   1.109602e-02 |   2.167930e-01 |
+|   9.262581e+03 |   2.179453e+03 |   1.147875e-02 |   2.429545e-01 |
+|   1.001267e+04 |   2.220892e+03 |   1.169673e-02 |   2.601528e-01 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step 27, time = 10762.8, dt = 750.086
+Pre-SMO residual: 832.751
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m3.084522e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 15
+ Damping factor: 0.107996
+ 1 Nonlinear |R| = [32m2.751484e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 15
+ Damping factor: 0.119989
+ 2 Nonlinear |R| = [32m2.421414e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 15
+ Damping factor: 0.135122
+ 3 Nonlinear |R| = [32m2.094302e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 15
+ Damping factor: 0.154817
+ 4 Nonlinear |R| = [32m1.770143e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 15
+ Damping factor: 0.181491
+ 5 Nonlinear |R| = [32m1.448951e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 15
+ Damping factor: 0.219678
+ 6 Nonlinear |R| = [32m1.130721e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 15
+ Damping factor: 0.278832
+ 7 Nonlinear |R| = [32m8.155115e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 15
+ Damping factor: 0.382776
+ 8 Nonlinear |R| = [32m5.034269e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 15
+ Damping factor: 0.612502
+ 9 Nonlinear |R| = [32m1.951511e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 15
+10 Nonlinear |R| = [32m1.664019e-05[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 16
+11 Nonlinear |R| = [32m1.418180e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 11
+  Finished Solving                                                                       [[33m 34.81 s[39m] [[33m  220 MB[39m]
+[32m Solve Converged![39m
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | mCS_xx         | mEE_xx         | mTE_xx         |
++----------------+----------------+----------------+----------------+
+:                :                :                :                :
+|   3.872390e+02 |   7.789789e+02 |   4.199929e-03 |   1.159660e-02 |
+|   5.818585e+02 |   8.666273e+02 |   4.628140e-03 |   1.736386e-02 |
+|   8.737878e+02 |   9.642188e+02 |   5.117803e-03 |   2.593976e-02 |
+|   1.311682e+03 |   1.087538e+03 |   5.752249e-03 |   3.863826e-02 |
+|   1.968523e+03 |   1.248670e+03 |   6.592005e-03 |   5.732480e-02 |
+|   2.953784e+03 |   1.452929e+03 |   7.662098e-03 |   8.457585e-02 |
+|   3.692730e+03 |   1.588078e+03 |   8.371588e-03 |   1.045954e-01 |
+|   4.431676e+03 |   1.706924e+03 |   8.995782e-03 |   1.242113e-01 |
+|   5.540095e+03 |   1.854139e+03 |   9.769148e-03 |   1.527638e-01 |
+|   6.282735e+03 |   1.940338e+03 |   1.022281e-02 |   1.715200e-01 |
+|   7.396696e+03 |   2.045569e+03 |   1.077551e-02 |   1.988393e-01 |
+|   8.143050e+03 |   2.106450e+03 |   1.109602e-02 |   2.167930e-01 |
+|   9.262581e+03 |   2.179453e+03 |   1.147875e-02 |   2.429545e-01 |
+|   1.001267e+04 |   2.220892e+03 |   1.169673e-02 |   2.601528e-01 |
+|   1.076275e+04 |   2.256053e+03 |   1.188149e-02 |   2.770308e-01 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step 28, time = 11140, dt = 377.248
+Pre-SMO residual: 418.824
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m8.228849e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 14
+ Damping factor: 0.975194
+ 1 Nonlinear |R| = [32m2.028649e-03[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 13
+ 2 Nonlinear |R| = [32m2.048471e-07[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 2
+  Finished Solving                                                                       [[33m 10.58 s[39m] [[33m  220 MB[39m]
+[32m Solve Converged![39m
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | mCS_xx         | mEE_xx         | mTE_xx         |
++----------------+----------------+----------------+----------------+
+:                :                :                :                :
+|   5.818585e+02 |   8.666273e+02 |   4.628140e-03 |   1.736386e-02 |
+|   8.737878e+02 |   9.642188e+02 |   5.117803e-03 |   2.593976e-02 |
+|   1.311682e+03 |   1.087538e+03 |   5.752249e-03 |   3.863826e-02 |
+|   1.968523e+03 |   1.248670e+03 |   6.592005e-03 |   5.732480e-02 |
+|   2.953784e+03 |   1.452929e+03 |   7.662098e-03 |   8.457585e-02 |
+|   3.692730e+03 |   1.588078e+03 |   8.371588e-03 |   1.045954e-01 |
+|   4.431676e+03 |   1.706924e+03 |   8.995782e-03 |   1.242113e-01 |
+|   5.540095e+03 |   1.854139e+03 |   9.769148e-03 |   1.527638e-01 |
+|   6.282735e+03 |   1.940338e+03 |   1.022281e-02 |   1.715200e-01 |
+|   7.396696e+03 |   2.045569e+03 |   1.077551e-02 |   1.988393e-01 |
+|   8.143050e+03 |   2.106450e+03 |   1.109602e-02 |   2.167930e-01 |
+|   9.262581e+03 |   2.179453e+03 |   1.147875e-02 |   2.429545e-01 |
+|   1.001267e+04 |   2.220892e+03 |   1.169673e-02 |   2.601528e-01 |
+|   1.076275e+04 |   2.256053e+03 |   1.188149e-02 |   2.770308e-01 |
+|   1.114000e+04 |   2.272032e+03 |   1.196596e-02 |   2.854411e-01 |
++----------------+----------------+----------------+----------------+
+
+Finished Executing                                                                       [[33m574.67 s[39m] [[33m  220 MB[39m]
+WARNING! There are options you set that were not used!
+WARNING! could be spelling mistake, etc!
+There is one unused database option. It is:
+Option left: name:-pc_factor_mat_solver_type value: boomeramg source: code
+
+  Starting on Monday, 01/20/25, 21:11:10
+
+   1)	Defining the mesh at 'mesh.e' with orientations (rad) at 'element_stats.csv' ...
+   2)	Getting the dimensions of the defined mesh ...
+   3)	Defining the material (deer/cpvh_ae) ...
+   4)	Defining the simulation (deer/1to1_ui_cp) ...
+   5)	Exporting the parameters ...
+   6)	Running the simulation ...
+
+  Running 'timeout 100000s mpiexec -np 48 ~/moose/deer/deer-opt -i simulation.i'
+
+   7)	Compressing the results ...
+   8)	Conducting post processing on simulation results ...
+   9)	Removing files ...
+
+  Finished on Monday, 01/20/25, 21:21:40 in 10 mins, 30 seconds
+
