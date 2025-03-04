@@ -192,12 +192,6 @@
     function = applied_load
     preset   = false
   [../]
-   [./pinXYZx]
-    type     = DirichletBC
-    boundary = 'pinXYZ'
-    variable = disp_x
-    value    = 0.0
-  [../]
   [./pinXYZy]
     type     = DirichletBC
     boundary = 'pinXYZ'
@@ -210,22 +204,10 @@
     variable = disp_z
     value    = 0.0
   [../]
-  [./pinXZx]
-    type     = DirichletBC
-    boundary = 'pinXZ'
-    variable = disp_x
-    value    = 0.0
-  [../]
   [./pinXZz]
     type     = DirichletBC
     boundary = 'pinXZ'
     variable = disp_z
-    value    = 0.0
-  [../]
-  [./pinXx]
-    type     = DirichletBC
-    boundary = 'pinX'
-    variable = disp_x
     value    = 0.0
   [../]
 []
