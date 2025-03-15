@@ -5,7 +5,7 @@
       <emodel type="CubicLinearElasticModel">
         <m1>250000</m1>
         <m2>151000</m2>
-        <m3>61500.0</m3>
+        <m3>246000</m3>
         <method>components</method>
       </emodel>
       <imodel type="AsaroInelasticity">
