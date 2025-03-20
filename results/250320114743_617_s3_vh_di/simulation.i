@@ -338,8 +338,14 @@
 # ==================================================
 
 [Outputs]
-  exodus = true
   print_linear_residuals = false
+  [./exodus]
+    type        = Exodus
+    sequence    = true
+    execute_on  = 'initial timestep_end'
+    sync_only   = true
+    sync_times  = '0.0 267.81 365.02 598.99 835.2 1083.7 1259.7 1524.3 1845.1 2172.9 2490.0 2842.0 3249.7 3674.5 4343.2 4856.9 5357.8 6039.0 6632.6 7804.0 8574.9 9079.3 9882.8 11140.0'
+  [../]
   [./console]
     type        = Console
     output_linear = false
