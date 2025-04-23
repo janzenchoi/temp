@@ -1,0 +1,47 @@
+
+<materials>
+  <cplh6_ae type="SingleCrystalModel">
+    <kinematics type="StandardKinematicModel">
+      <emodel type="CubicLinearElasticModel">
+        <m1>250000</m1>
+        <m2>151000</m2>
+        <m3>123000</m3>
+        <method>components</method>
+      </emodel>
+      <imodel type="AsaroInelasticity">
+        <rule type="PowerLawSlipRule">
+          <resistance type="GeneralLinearHardening">
+            <M type="SquareMatrix">
+              <m>12</m>
+              <type>dense</type>
+              <data>7.0617e-06 14.054 14.054 485.92 411.31 411.31 811.22 411.31 775.31 811.22 775.31 411.31 14.054 7.0617e-06 14.054 411.31 811.22 775.31 411.31 485.92 411.31 775.31 811.22 411.31 14.054 14.054 7.0617e-06 411.31 775.31 811.22 775.31 411.31 811.22 411.31 411.31 485.92 485.92 411.31 411.31 7.0617e-06 14.054 14.054 811.22 775.31 411.31 811.22 411.31 775.31 411.31 811.22 775.31 14.054 7.0617e-06 14.054 775.31 811.22 411.31 411.31 485.92 411.31 411.31 775.31 811.22 14.054 14.054 7.0617e-06 411.31 411.31 485.92 775.31 411.31 811.22 811.22 411.31 775.31 811.22 775.31 411.31 7.0617e-06 14.054 14.054 485.92 411.31 411.31 411.31 485.92 411.31 775.31 811.22 411.31 14.054 7.0617e-06 14.054 411.31 811.22 775.31 775.31 411.31 811.22 411.31 411.31 485.92 14.054 14.054 7.0617e-06 411.31 775.31 811.22 811.22 775.31 411.31 811.22 411.31 775.31 485.92 411.31 411.31 7.0617e-06 14.054 14.054 775.31 811.22 411.31 411.31 485.92 411.31 411.31 811.22 775.31 14.054 7.0617e-06 14.054 411.31 411.31 485.92 775.31 411.31 811.22 411.31 775.31 811.22 14.054 14.054 7.0617e-06</data>
+            </M>
+            <tau_0>12.055 12.055 12.055 12.055 12.055 12.055 12.055 12.055 12.055 12.055 12.055 12.055</tau_0>
+            <absval>true</absval>
+          </resistance>
+          <gamma0>3.25e-05</gamma0>
+          <n>2.3783</n>
+        </rule>
+      </imodel>
+    </kinematics>
+    <lattice type="CubicLattice">
+      <a>1.0</a>
+      <slip_systems>1 1 0 ; 1 1 1</slip_systems>
+    </lattice>
+    <alpha type="ConstantInterpolate">
+      <v>0</v>
+    </alpha>
+    <update_rotation>true</update_rotation>
+    <rtol>1e-08</rtol>
+    <atol>1e-06</atol>
+    <miter>50</miter>
+    <verbose>false</verbose>
+    <linesearch>false</linesearch>
+    <max_divide>4</max_divide>
+    <postprocessors/>
+    <elastic_predictor>false</elastic_predictor>
+    <fallback_elastic_predictor>true</fallback_elastic_predictor>
+    <force_divide>0</force_divide>
+    <elastic_predictor_first_step>false</elastic_predictor_first_step>
+  </cplh6_ae>
+</materials>

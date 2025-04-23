@@ -1,0 +1,47 @@
+
+<materials>
+  <cplh6_ae type="SingleCrystalModel">
+    <kinematics type="StandardKinematicModel">
+      <emodel type="CubicLinearElasticModel">
+        <m1>250000</m1>
+        <m2>151000</m2>
+        <m3>123000</m3>
+        <method>components</method>
+      </emodel>
+      <imodel type="AsaroInelasticity">
+        <rule type="PowerLawSlipRule">
+          <resistance type="GeneralLinearHardening">
+            <M type="SquareMatrix">
+              <m>12</m>
+              <type>dense</type>
+              <data>0.012365 5.8408e-08 5.8408e-08 559.9 186.55 186.55 866.02 186.55 798.78 866.02 798.78 186.55 5.8408e-08 0.012365 5.8408e-08 186.55 866.02 798.78 186.55 559.9 186.55 798.78 866.02 186.55 5.8408e-08 5.8408e-08 0.012365 186.55 798.78 866.02 798.78 186.55 866.02 186.55 186.55 559.9 559.9 186.55 186.55 0.012365 5.8408e-08 5.8408e-08 866.02 798.78 186.55 866.02 186.55 798.78 186.55 866.02 798.78 5.8408e-08 0.012365 5.8408e-08 798.78 866.02 186.55 186.55 559.9 186.55 186.55 798.78 866.02 5.8408e-08 5.8408e-08 0.012365 186.55 186.55 559.9 798.78 186.55 866.02 866.02 186.55 798.78 866.02 798.78 186.55 0.012365 5.8408e-08 5.8408e-08 559.9 186.55 186.55 186.55 559.9 186.55 798.78 866.02 186.55 5.8408e-08 0.012365 5.8408e-08 186.55 866.02 798.78 798.78 186.55 866.02 186.55 186.55 559.9 5.8408e-08 5.8408e-08 0.012365 186.55 798.78 866.02 866.02 798.78 186.55 866.02 186.55 798.78 559.9 186.55 186.55 0.012365 5.8408e-08 5.8408e-08 798.78 866.02 186.55 186.55 559.9 186.55 186.55 866.02 798.78 5.8408e-08 0.012365 5.8408e-08 186.55 186.55 559.9 798.78 186.55 866.02 186.55 798.78 866.02 5.8408e-08 5.8408e-08 0.012365</data>
+            </M>
+            <tau_0>79.892 79.892 79.892 79.892 79.892 79.892 79.892 79.892 79.892 79.892 79.892 79.892</tau_0>
+            <absval>true</absval>
+          </resistance>
+          <gamma0>3.25e-05</gamma0>
+          <n>3.6491</n>
+        </rule>
+      </imodel>
+    </kinematics>
+    <lattice type="CubicLattice">
+      <a>1.0</a>
+      <slip_systems>1 1 0 ; 1 1 1</slip_systems>
+    </lattice>
+    <alpha type="ConstantInterpolate">
+      <v>0</v>
+    </alpha>
+    <update_rotation>true</update_rotation>
+    <rtol>1e-08</rtol>
+    <atol>1e-06</atol>
+    <miter>50</miter>
+    <verbose>false</verbose>
+    <linesearch>false</linesearch>
+    <max_divide>4</max_divide>
+    <postprocessors/>
+    <elastic_predictor>false</elastic_predictor>
+    <fallback_elastic_predictor>true</fallback_elastic_predictor>
+    <force_divide>0</force_divide>
+    <elastic_predictor_first_step>false</elastic_predictor_first_step>
+  </cplh6_ae>
+</materials>
